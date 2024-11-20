@@ -1,11 +1,14 @@
 Package: slidingwindowir
-Title: IntermediateR Sliding Window
+Title: Sliding Window IntermediateR
 Version: 0.0.0.9000
 Authors@R: 
-    person("Sebastian", "Wettersten", , "sebastian.wettersten@ki.se", role = c("aut", "cre"),
-           comment = c(ORCID = "0009-0008-3414-9299"))
-Description: Sliding window algorithms for accelerometer data, intermediate R course work
+  person("Sebastian", "Wettersten", , "sebastian.wettersten@ki.se",
+  role = c("aut", "cre"), comment = c(ORCID = "0009-0008-3414-9299"))
+Description: Sliding window algorithms for accelerometer data, intermediate R
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
+Imports:
+  data.table
+  ggplot2
