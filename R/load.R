@@ -1,4 +1,10 @@
-# TODO - documentation loading file
+#' Load Data Table
+#'
+#' Loads the data to be used in the sliding window, does nothing if file
+#' does not exist.
+#'
+#' @param infile Path to data to read in
+#' @return Returns data in data.table format
 load_dt <- function(infile) {
   # check if the file exists
   if (file.exists(infile)) {
