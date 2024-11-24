@@ -9,10 +9,10 @@
 #' between the first element and the mean of the window is greater than or equal
 #' to threshold, otherwise returns the first element
 calc_window_mean <- function(inwindow, threshold) {
-  curr <- inwindow[1]$euclidean
+  curr <- inwindow[1,]$euclidean
   avg <- mean(inwindow$euclidean)
 
-  if ((curr-avg) >= threshold | (abs(curr-avg) >= threshold)) {
+  if (((curr - avg) >= threshold) | (abs(curr - avg) >= threshold)) {
     return(avg)
   } else {
     return(curr)
@@ -67,17 +67,17 @@ sliding_window <- function(infile,
   dt <- load_dt(infile)  # load the data
 
   # iterate over the data, using window size
-  for (i in 1:(length(dt$V1)-window_size)) {
-    window <- dt[i:(i+window_size-1)]
+  for (i in 1:(length(dt[[1]])-window_size)) {
+    window <- dt[i:(i+window_size-1),]
 
     # calculate smooth by mean with threshold
     if (sw_mean) {
-      dt[i]$mean <- calc_window_mean(window, threshold)
+      dt[i, ]$mean <- calc_window_mean(window, threshold)
     }
 
     # add binary if acceleration increase/decrease
     if (sw_binary) {
-      dt[i]$binary <- calc_window_binary(window)
+      dt[i, ]$binary <- calc_window_binary(window)
     }
   }
 

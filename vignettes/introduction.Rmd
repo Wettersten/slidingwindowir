@@ -1,0 +1,24 @@
+---
+title: "Introduction to slidingwindowir"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{introduction}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+Test
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+library(slidingwindowir)
+```
+
+```{r example}
+test_file <- "../inst/extdata/Example_window.csv"
+sliding_window(infile = test_file, sw_mean = TRUE)
+
+```
