@@ -1,6 +1,6 @@
 Package: slidingwindowir
 Title: Sliding Window IntermediateR
-Version: 0.0.0.9000
+Version: 0.9.1
 Authors@R: 
   person("Sebastian", "Wettersten", , "sebastian.wettersten@ki.se",
   role = c("aut", "cre"), comment = c(ORCID = "0009-0008-3414-9299"))
@@ -12,7 +12,7 @@ RoxygenNote: 7.3.2
 Imports: 
     cowplot,
     data.table,
-    ggplot2 (>= 3.5.1)
+    ggplot2
 Suggests: 
     knitr,
     rmarkdown,
