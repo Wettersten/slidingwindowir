@@ -3,4 +3,5 @@
 # smoothing sliding window algorithm and outputs that plot.
 
 library(slidingwindowir)
+library(ggplot2)
 sliding_window(infile = "inst/extdata/Example_window.csv", sw_mean = TRUE)
